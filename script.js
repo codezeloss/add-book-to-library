@@ -44,14 +44,12 @@ function displayBooksInfo() {
     </div>`;
   }
 
-  displayBooks.innerHTML = booksInfos;
-
-  // if (bookTitle.value && bookAuthor.value && bookPages.value) {
-  //   submitBtn.disabled = false;
-  //   displayBooks.innerHTML = booksInfos;
-  // } else {
-  //   submitBtn.disabled = true;
-  // }
+  if (bookTitle.value && bookAuthor.value && bookPages.value) {
+    submitBtn.disabled = false;
+    displayBooks.innerHTML = booksInfos;
+  } else {
+    submitBtn.disabled = true;
+  }
 }
 
 submitBtn.addEventListener("click", addBookToLibrary);
