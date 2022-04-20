@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="dist/output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/books-icon.png" />
+    <title>My Book Library</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="heading-primary">Book Library</h1>
+      </header>
+
+      <main>
+        <section class="books-infos-section">
+          <form method="post">
+            <div class="book-infos flex flex-row">
+              <div class="flex flex-col">
+                <label class="label-text" for="title">Book title</label>
+                <input
+                  class="input title-input"
+                  type="text"
+                  name="title"
+                  id="title"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label class="label-text" for="author">Author</label>
+                <input
+                  class="input author-input"
+                  type="text"
+                  name="author"
+                  id="author"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label class="label-text" for="pages">Pages</label>
+                <input
+                  class="input-pg pages-input"
+                  type="number"
+                  name="pages"
+                  id="pages"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label class="label-text" for="read">Status</label>
+                <select class="read-input" name="read" id="read">
+                  <option value="select" selected>Select</option>
+                  <option value="Read">Read</option>
+                  <option value="Unread">Unread</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <input
+                id="submit"
+                class="submit-btn"
+                type="button"
+                value="submit"
+              />
+            </div>
+          </form>
+        </section>
+
+        <section class="books-cards-section">
+          <div class="book-card">
+            <div class="book-card-header">
+              <h2 class="heading-secondary book-card-title">Book Title</h2>
+              <h3 class="heading-teritary book-card-author">Author name</h3>
+            </div>
+            <img src="img/books-img.jpg" alt="" />
+            <div class="book-card-status">
+              <p class="pages-number">Pages : <b>100</b></p>
+              <p class="read-status-el">Read Status : <b>Unread</b></p>
+            </div>
+            <button id="delete" class="delete-btn" type="button">Delete</button>
+          </div>
+        </section>
+      </main>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>
